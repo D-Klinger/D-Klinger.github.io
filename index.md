@@ -30,8 +30,9 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 <br><br>
 
 **CS-499 MEAN SPA – InvenX**  
-[View InvenX Frontend Files Online]()
-[View InvenX Backend Files Online]()
+[View InvenX Frontend Files Online](https://github.com/D-Klinger/D-Klinger.github.io/tree/Main/frontend/inventory-app)
+<br><br>
+[View InvenX Backend Files Online](https://github.com/D-Klinger/D-Klinger.github.io/tree/Main/backend)
 
 ---
 
