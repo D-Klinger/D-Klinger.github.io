@@ -1,0 +1,51 @@
+<h1 class="app-title">InvenX</h1>
+
+<div *ngIf="errorMessage" class="error-banner">{{ errorMessage }}</div>
+
+<h2 class="form-title">{{ isEditMode ? 'Edit Item' : 'Add Item' }}</h2>
+
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()" class="form-container">
+
+  <label>Name:</label>
+  <input type="text" formControlName="name" class="input-field" /><br />
+
+    <label>Category:</label>
+    <input type="text" formControlName="category" class="input-field" /><br />
+
+    <label>Quantity:</label>
+    <input type="number" formControlName="quantity" class="input-field" /><br />
+
+    <label>Price:</label>
+    <input type="number" formControlName="price" class="input-field" /><br />
+
+    <label>Location:</label>
+    <input type="text" formControlName="location" class="input-field" /><br />
+
+    <label>Description:</label>
+    <input type="text" formControlName="description" class="input-field" /><br />
+
+    <label>Perishable:</label>
+    <input type="checkbox" formControlName="perishable" class="perish-checkbox" /><br />
+
+    <label>Expiration Date:</label>
+    <input type="date" formControlName="expirationDate" class="input-field" /><br />
+
+    <label>Supplier:</label>
+    <input type="text" formControlName="supplier" class="input-field" /><br />
+
+    <label>Reorder Threshold:</label>
+    <input type="number" formControlName="reorderThreshold" class="input-field" /><br />
+
+    <div class="mult-btn-box">
+
+      <button type="submit" [disabled]="itemForm.invalid" class="reg-log-btn">
+        {{ isEditMode ? 'Update' : 'Add' }}
+      </button>
+
+      <button type="button" (click)="cancel()" class="reg-log-btn">
+        Cancel
+      </button>
+
+    </div>
+
+</form>

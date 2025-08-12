@@ -1,0 +1,18 @@
+<h1 class="invenx-title">InvenX</h1>
+
+<h2 class="form-title">Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-container">
+
+  <input type="email" formControlName="email" placeholder="Email" class="input-field" /><br>
+  <input type="password" formControlName="password" placeholder="Password" class="input-field" /><br>
+
+  <button type="submit" class="reg-log-btn" [disabled]="loginForm.invalid">Login</button>
+
+  <div *ngIf="errorMessage" style="color: red" class="form-message">{{errorMessage}}</div>
+</form>
+
+<h3 style="text-align: center; margin-top: 20px;">
+  Don't have an account? 
+  <a routerLink="/register" class="reg-log-btn" style="margin-left: 10px;">Register</a>
+</h3>

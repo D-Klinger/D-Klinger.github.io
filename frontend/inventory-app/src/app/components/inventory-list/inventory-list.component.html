@@ -1,0 +1,190 @@
+<nav class="menu-bar">
+
+    <div class="menu-left">
+        <span class="app-title">
+            InvenX
+        </span>
+    </div>
+
+    <div class="menu-center">
+        <form (submit)="onSearchSubmit($event)" class="search-form" autocomplete="on">
+            <input 
+                type="text"
+                placeholder="Search InvenX inventory..."
+                [(ngModel)]="searchTerm"
+                name="search"
+                class="search-bar"
+                maxLength="100"
+                pattern="^[a-zA-Z0-9 \-_,.]+$"
+                mgModelOptions="{standalone: true}"
+            />
+            <button type="submit" class="search-btn">
+                Search
+            </button>
+            <button type="button" (click)="clearSearch()" class="cancel-btn" *ngIf="searchTerm">
+                Cancel
+            </button>
+        </form>
+    </div>
+
+    <div class="menu-right">
+        <span *ngIf="userName" class="welcome-msg">
+            Welcome, {{ userName }}!
+        </span>
+        <button (click)="logout()" class="reg-log-btn">
+            Logout
+        </button>
+    </div>
+
+</nav>
+
+<div class="inventory-container">
+
+    <aside class="sidebar">
+
+        <button (click)="addItem()" class="add-item-btn" >
+            Add New Item
+        </button>
+        <button (click)="resetFilters()" class="reset-btn">
+            Reset Filters
+        </button>
+        <h3 class="filter-title" >
+            Sort Inventory
+        </h3>
+
+        <div class="sort-options">
+
+            <label *ngFor="let option of sortFields">
+                <input 
+                    type="radio"
+                    name="sort"
+                    [value]="option.value"
+                    (change)="setSort(option.value)"
+                    [checked]="sortField===option.value"
+                />
+                {{ option.label }}
+            </label>
+
+            <div class="sort-btns">
+                <button (click)="setSortDirection('asc')" [class.active]="sortDirection==='asc'">
+                    Ascending
+                </button>
+                <button (click)="setSortDirection('desc')" [class.active]="sortDirection==='desc'">
+                    Descending
+                </button>
+            </div>
+
+        </div>
+
+        <hr class="section-divider-thick">
+
+        <h3 class="filter-title" >
+            Inventory Filter
+        </h3>
+
+        <div class="inventory-filter">
+
+            <div class="filter-group">
+                <label>Quantity: {{ quantityRange[0] }} - {{ quantityRange[1] }} </label>
+                <input type="range" min="0" max="500" [(ngModel)]="quantityRange[0]" name="quantityMin" />
+                <input type="range" min="0" max="500" [(ngModel)]="quantityRange[1]" name="quantityMax" />
+            </div>
+
+            <hr class="section-divider-thin">
+
+            <div class="filter-group">
+                <label>Price: {{ priceRange[0] }} - {{ priceRange[1] }} </label>
+                <input type="range" min="0" max="1000" [(ngModel)]="priceRange[0]" name="priceMin" />
+                <input type="range" min="0" max="1000" [(ngModel)]="priceRange[1]" name="priceMax" />
+            </div>
+
+            <hr class="section-divider-thin">
+
+            <div class="filter-group">
+                <label>Reorder Threshold: {{ reorderRange[0] }} - {{ reorderRange[1] }} </label>
+                <input type="range" min="0" max="500" [(ngModel)]="reorderRange[0]" name="reorderMin" />
+                <input type="range" min="0" max="500" [(ngModel)]="reorderRange[1]" name="reorderMax" />
+            </div>
+
+            <hr class="section-divider-thin">
+            
+            <div class="filter-group">
+                <label>
+                    <h3 class="filter-title" >
+                        Categories:
+                    </h3>
+                </label>
+
+                <div class="category-checkboxes">
+                    <label *ngFor="let cat of categoryList">
+                        <input type="checkbox" [(ngModel)]="selectedCategories[cat]" name="{{cat}}" />
+                        {{ cat }}
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <section class="table-section">
+
+        <div *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</div>
+
+            <table class="inventory-table">
+            <thead>
+
+                <tr>
+                    <th>Increase</th>
+                    <th>Decrease</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Location</th>
+                    <th>Price</th>
+                    <th>Reorder Threshold</th>
+                    <th>Supplier</th>
+                    <th>Actions</th>
+                </tr>
+                
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let item of filteredAndSortedItems">
+                    <td>
+                        <button (click)="incrementQuantity(item)" class="action-btn">+</button>
+                    </td>
+                    <td>
+                        <button (click)="decrementQuantity(item)" class="action-btn" [disabled]="item.quantity <=0">-</button>
+                    </td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.category }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.location }}</td>
+                    <td>{{ item.price | currency }}</td>
+                    <td>{{ item.reorderThreshold }}</td>
+                    <td>{{ item.supplier }}</td>
+                    <td>
+                        <button class="action-btn action-btn-margin" (click)="editItem(item)">
+                            Edit
+                        </button>
+                        <button class="action-btn" (click)="deleteItem(item)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="filteredAndSortedItems.length === 0">
+                    <td colspan="9">No Inventory items have been found.</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>

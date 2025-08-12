@@ -1,0 +1,42 @@
+<h1 class="invenx-title">InvenX</h1>
+
+<h2 class="form-title">Register</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-container">
+
+  <input type="text" formControlName="userName" placeholder="Username" class="input-field" /><br>
+  <div *ngIf="registerForm.controls['userName'].invalid && registerForm.controls['userName'].touched" class="field-error">
+    User name is a required field.
+  </div>
+  <input type="text" formControlName="firstName" placeholder="First Name" class="input-field" /><br>
+  <div *ngIf="registerForm.controls['firstName'].invalid && registerForm.controls['firstName'].touched" class="field-error">
+    First name is a required field.
+  </div>
+  <input type="text" formControlName="lastName" placeholder="Last Name" class="input-field" /><br>
+  <div *ngIf="registerForm.controls['lastName'].invalid && registerForm.controls['lastName'].touched" class="field-error">
+    Last name is a required field.
+  </div>
+  <input type="text" formControlName="phoneNumber" placeholder="Phone Number" class="input-field" /><br>
+  <div *ngIf="registerForm.controls['phoneNumber'].invalid && registerForm.controls['phoneNumber'].touched" class="field-error">
+    Phone number is a required field.
+  </div>
+  <input type="email" formControlName="email" placeholder="Email" class="input-field" /><br>
+  <div *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched" class="field-error">
+    Email is a required field.
+  </div>
+  <input type="password" formControlName="password" placeholder="Password" class="input-field" /><br>
+  <div *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched" class="field-error">
+    A valid password is required.
+  </div>
+
+  <button type="submit" class="reg-log-btn" [disabled]="registerForm.invalid">Register</button>
+
+  <div *ngIf="errorMessage" style="color: red" class="form-message">{{errorMessage}}</div>
+  <div *ngIf="successMessage" style="color: green" class="form-message">{{successMessage}}</div>
+
+</form>
+
+<h3 style="text-align: center; margin-top: 20px;">
+  Already have an account? 
+  <a routerLink="/login" class="reg-log-btn" style="margin-left: 10px;">Login</a>
+</h3>
