@@ -22,8 +22,6 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 
 ## My Original and Enhanced Arifacts
 
-<br><br>
-
 **CS-360 Android Inventory App**  
 [Download CS-360 Zip – Java Android App](https://github.com/D-Klinger/D-Klinger.github.io/blob/Main/CS_360_Project_Dana_Klinger.zip)
 
