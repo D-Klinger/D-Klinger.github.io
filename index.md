@@ -1,7 +1,3 @@
----
-title: "Dana Klinger's CS 499 ePortfolio"
----
-
 # Dana Klinger's ePortfolio
 
 <br><br>
@@ -12,7 +8,13 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 
 ## My Professional Self Assessment
 
-**TODO:**
+[Download Professional Self Assessment](https://github.com/D-Klinger/D-Klinger.github.io/blob/Main/Klinger%20CS%20499%20Professional%20Self%20Assessment.docx)
+
+<br><br>
+
+<iframe src="Klinger%20CS%20499%20Professional%20Self%20Assessment.pdf#view=FitH&toolbar=0" width="100%" height="650" style="border:0;"></iframe>
+
+<br><br>
 
 ## My Code Review Video for CS‑360 Android Inventory Application
 
@@ -32,6 +34,7 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 <br><br>
 [View InvenX Backend Files Online](https://github.com/D-Klinger/D-Klinger.github.io/tree/Main/backend)
 
+<br><br>
 ---
 
 ## Narrative Reflections
@@ -62,3 +65,7 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 <br><br>
 
 <iframe src="Klinger%20CS%20499%20Milestone%20Four.pdf#view=FitH&toolbar=0" width="100%" height="650" style="border:0;"></iframe>
+
+<br><br>
+
+#### Designed by Dana Klinger, August 2025
