@@ -2,11 +2,11 @@
 
 <br><br>
 
-## My Specialization Focus
+## 1. My Specialization Focus
 
 My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack Web Development**. I rewrote my CS-360 Android inventory app, made in Java, as a MEAN application named InvenX in JavaScript with secure endpoints, sanitized inputs, and client‑side filters.
 
-## My Professional Self Assessment
+## 2. My Professional Self Assessment
 
 [Download Professional Self Assessment](https://github.com/D-Klinger/D-Klinger.github.io/blob/Main/Klinger%20CS%20499%20Professional%20Self%20Assessment.docx)
 
@@ -16,32 +16,31 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 
 <br><br>
 
-## My Code Review Video for CS‑360 Android Inventory Application
+## 3. My Code Review Video for CS‑360 Android Inventory Application
 
 [Watch Code Review on My YouTube Channel](https://www.youtube.com/watch?v=nUOdc7psTko)
 
 <br><br>
 
-## My Original and Enhanced Arifacts
+## 4. My Original and Enhanced Arifacts
 
-**CS-360 Android Inventory App**  
+**A. Original Artifact: CS-360 Android Inventory App**  
 [Download CS-360 Zip – Java Android App](https://github.com/D-Klinger/D-Klinger.github.io/blob/Main/CS_360_Project_Dana_Klinger.zip)
 
 <br><br>
 
-**CS-499 MEAN SPA – InvenX**  
+**B. Enhanced Artifact: CS-499 MEAN SPA – InvenX**  
 [View InvenX Frontend Files Online](https://github.com/D-Klinger/D-Klinger.github.io/tree/Main/frontend/inventory-app)
 <br><br>
 [View InvenX Backend Files Online](https://github.com/D-Klinger/D-Klinger.github.io/tree/Main/backend)
 
-<br><br>
 ---
 
-## Narrative Reflections
+## 5. Narrative Reflections
 
 <br><br>
 
-### Milestone Two
+### A. Milestone Two
 [Download Word Document Version](https://github.com/D-Klinger/D-Klinger.github.io/blob/Main/Klinger%20CS%20499%20Milestone%20Two.docx)
 
 <br><br>
@@ -50,7 +49,7 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 
 <br><br>
 
-### Milestone Three
+### B. Milestone Three
 [Download Word Document Version](https://github.com/D-Klinger/D-Klinger.github.io/blob/Main/Klinger%20CS%20499%20Milestone%20Three.docx)
 
 <br><br>
@@ -59,7 +58,7 @@ My ePortfolio focuses on my specialization in **Cybersecurity and Full‑Stack W
 
 <br><br>
 
-### Milestone Four
+### C. Milestone Four
 [Download Word Document Version](https://github.com/D-Klinger/D-Klinger.github.io/blob/Main/Klinger%20CS%20499%20Milestone%20Four.docx)
 
 <br><br>
